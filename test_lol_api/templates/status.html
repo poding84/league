@@ -1,0 +1,11 @@
+{% load util %}
+<h1> League of legend KR server status </h1>
+
+<ul>
+{% for key, value in statusDict.items %}
+
+    <li> {{value}} </li>
+
+
+{% endfor %}
+</ul>
