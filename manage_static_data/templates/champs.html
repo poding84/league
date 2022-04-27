@@ -1,0 +1,22 @@
+{% extends 'meta.html' %}
+
+{% block content %}
+
+<h1> League of Legend Champion List </h1>
+
+<ul>
+{% for key, value in champs.items %}
+    
+    <li> {{key}} </li>
+    <ul>
+        {% for key2, value2 in value.items %}
+        <li>
+            {{key2}} - {{value2}}
+        </li>
+        {% endfor %}
+    </ul>
+
+{% endfor %}
+</ul>
+
+{% endblock %}
