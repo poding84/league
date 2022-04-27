@@ -3,4 +3,5 @@ __pycache__/
 .DS_Store
 secret.py
 venv
-.sqlite3
+db.sqlite3
+dragontail
