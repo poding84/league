@@ -18,12 +18,53 @@
         total {{masteryLen}} results
     </h5>
 </div>
-<ul>
-    {% for value in masteryList %}
-    <li>
-        {{value.championId}}, {{value.championLevel}}, {{value.championPoints}}, {{value.tokensEarned}}
-    </li>
-    {% endfor %}
-</ul>
+
+<div class="masteryStat">
+    <ul>
+        {% for value in masteryStat %}
+        <li>
+            {{value}}   
+        </li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for value in masteryAvg %}
+        <li>
+            {{value}}   
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div>
+    <ul>
+        {% for value in masteryList %}
+        <li>
+            {{value.championId}}, {{value.championLevel}}, {{value.championPoints}}, {{value.tokensEarned}}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+<style>
+    .masteryStat {
+        display: flex;
+        justify-content: left;
+    }
+    .masteryStat ul {
+        float:left; 
+        text-align:center;
+    }
+    .masteryStat ul li{
+        list-style: none; 
+        display:inline-block; 
+        text-align:center;
+        margin-right: 20px;
+    }
+</style>
 
 {% endblock %}
+

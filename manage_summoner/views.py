@@ -15,6 +15,20 @@ def summoner_name(request) :
     riot_status_url = "https://kr.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/" + summonerDict['id']
     response = requests.get(riot_status_url, headers={"X-Riot-Token": key}) 
     masteryList = response.json()
-    return render(request, 'summoner_name.html', {"summoner" : summoner, "summonerDict" : summonerDict, "masteryList" : masteryList, "masteryLen" : len(masteryList)})
+    masteryStat = [0 for i in range(8)]
+    masteryAvg = [0 for i in range(8)]
+    for mastery in masteryList :
+        masteryStat[mastery['championLevel']] += 1
+        masteryAvg[mastery['championLevel']] += mastery['championPoints']
+
+    return render(request, 'summoner_name.html', 
+        {"summoner" : summoner, 
+        "summonerDict" : summonerDict, 
+        "masteryList" : masteryList, 
+        "masteryLen" : len(masteryList),
+        "masteryStat" : masteryStat[1:],
+        "masteryAvg" : masteryAvg[1:]
+    }
+    )
 
 # Create your views here.
