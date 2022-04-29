@@ -1,0 +1,25 @@
+{% extends 'meta.html' %}
+
+{% block content %}
+    <form action="http://127.0.0.1:8000/summoner/name" class="search-form-input" role="search">
+        <label class="visuallyhidden" for="id_q">Search:</label>
+        <input type="search" name="q" placeholder="Enter summoner name" id="id_q" value={{summoner}}>
+
+        <button type="submit">
+            <i class="icon icon-search"></i>
+            <span class="visuallyhidden">Search</span>
+        </button>
+    </form>
+    <style>
+        .search-form-input {
+            padding: 10px;
+            display: flex;
+            justify-content: right;
+        }
+    </style>
+{% endblock %}
+<div>
+{% block search %}
+
+{% endblock %}
+</div>

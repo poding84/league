@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'test_lol_api',
     'league',
     'manage_static_data',
+    'manage_summoner',
 ]
 
 MIDDLEWARE = [

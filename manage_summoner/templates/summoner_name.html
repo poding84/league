@@ -1,0 +1,29 @@
+{% include 'enquiry.html' %}
+
+{% block search %}
+<h1> summoner "{{summoner}}" data </h1>
+
+<ul>
+{% for key, value in summonerDict.items %}
+
+    <li>
+        {{key}} - {{value}}
+    </li>
+    
+
+</ul>
+{% endfor %}
+<div>
+    <h5>
+        total {{masteryLen}} results
+    </h5>
+</div>
+<ul>
+    {% for value in masteryList %}
+    <li>
+        {{value.championId}}, {{value.championLevel}}, {{value.championPoints}}, {{value.tokensEarned}}
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
