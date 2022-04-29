@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'league',
     'manage_static_data',
     'manage_summoner',
+    'model_champion'
 ]
 
 MIDDLEWARE = [

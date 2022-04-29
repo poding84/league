@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('test/', include('test_lol_api.urls')),
     path('dragon/', include('manage_static_data.urls')),
-    path('summoner/', include('manage_summoner.urls'))
+    path('summoner/', include('manage_summoner.urls')),
+    path('model/', include('model_champion.urls'))
 ]
