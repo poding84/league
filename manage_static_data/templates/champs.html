@@ -7,7 +7,10 @@
 <ul>
 {% for key, value in champs.items %}
     
-    <li> {{key}} </li>
+    <li>
+         {{key}}
+         <a href="http://127.0.0.1:8000/dragon/champs/{{key}}">(Overview)</a>
+    </li>
     <ul>
         {% for key2, value2 in value.items %}
         <li>

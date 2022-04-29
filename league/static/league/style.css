@@ -4,7 +4,38 @@ body {
 }
 
 h1 {
-    background-color: bisque;
+    background-color: pink;
     text-align: center;
     padding: 10px 10px 10px 10px;
+}
+
+p.meta{
+    text-align: center;
+    width:30%
+}
+
+.container {
+    background-color: aqua;
+    display: flex;
+    justify-content: right;
+}
+
+.navigation {
+    text-align: center;
+    width:70%; 
+    margin:0 auto;
+    display: flex;
+    justify-content: right;
+}
+
+.navigation ul {
+    float:right; 
+    text-align:center;
+}
+
+.navigation ul li {
+    list-style: none; 
+    display:inline-block; 
+    text-align:center;
+    margin-right: 20px;
 }

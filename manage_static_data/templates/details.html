@@ -1,0 +1,31 @@
+{% extends 'meta.html' %}
+
+{% block content %}
+
+<h1> "{{championName}}" detail page</h1>
+
+<ul>
+{% for key, value in detail.items %}
+    {% if key != 'data' %}
+    <li>
+         {{key}} - {{value}}
+    </li>
+    {% else %}
+    <li>
+        {{key}}
+   </li>
+    <ul>
+        {% for key2, value2 in value.items %}
+            {% for key3, value3 in value2.items %}
+            <li>
+                {{key3}} - {{value3}}
+            </li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+{% endfor %}
+</ul>
+
+{% endblock %}
